@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/Card';
 
-function App() {
+const App = ({ cardInfo: { status, data } }) => {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>OMERS ASSIGNMENT</h1>
+      {
+        status === "pass" ?
+        data.map((card) => {
+          return <Card
+            key={data.indexOf(card)} personalInformation={card}
+          />
+        }) :
+        <h2 className="error-text">There was an error loading the data</h2>
+      }
+      <h5 id="author">Created By Brandon Levy</h5>
     </div>
   );
 }

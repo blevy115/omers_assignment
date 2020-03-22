@@ -1,0 +1,59 @@
+.card {
+  border: 1px solid darkgrey;
+  margin: 1em;
+  text-align: left
+}
+
+.card-header {
+  background-color: cornflowerblue;
+  text-align: left;
+
+}
+
+.card-title {
+  color: white;
+  margin: 0;
+  padding: 0.5em 1em;
+  font-weight: normal;
+  font-size: 30px
+}
+
+.card-name {
+  border-bottom: 1px solid lightgrey;
+  margin: 0 2em;
+}
+
+.member-name {
+  font-size: 50px;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.data-title {
+  font-size: 20px
+}
+
+.data-info {
+  font-weight: 600;
+}
+
+.data-list-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 0 2em;
+
+}
+
+@media (max-width: 320px) {
+  .data-list-item {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  h3 {
+    margin: 10px 0
+  }
+}
+
+.data-list-item:nth-child(even) {
+  background-color: lightgrey;
+}
